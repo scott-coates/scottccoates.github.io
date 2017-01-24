@@ -28,6 +28,7 @@ angellist: scottcoates
 #Comment out if you don't want disqus
 # disqus: username
 # google_analytics: UA-69391421-1
+segment: 22kXZcNfm3HZCeCX2qb3h9CQnGyLqPU9
 
 
 # needed for travis-ci build
