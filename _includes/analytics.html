@@ -5,6 +5,19 @@
   analytics.load('{{ site.segment }}');
   analytics.page();
   }}();
+
+  $(function () {
+    $("[data-track]").click(function (e, args) {
+      var event = e.target;
+      while (event !== this){
+        event = event.parentNode;
+      }
+
+      var trackPageName = $(event).data('track');
+      analytics.page(null, trackPageName, {path: event.href});
+    });
+  });
+
 </script>
 {% endif %}
 
